@@ -66,21 +66,15 @@ function loadData(city) {
         pressure.innerHTML = data.main.pressure;
         humidity.innerHTML = data.main.humidity + "%";
         
-        // Wind - These properties are some times missing. Check for undefined before displaying them!
-        // var speed = data.wind.speed;
-        // var deg = data.wind.deg;
-
+        // Wind - These properties are some times missing. Check for undefined before displaying.
         if (data.wind.speed != undefined) {
-            speed.innerHTML = data.wind.speed; 
-            console.log('This is speed: ', speed)           
+            speed.innerHTML = data.wind.speed;            
         }
         if (data.wind.deg != undefined) {
-            deg.innerHTML = data.wind.deg;
-            console.log('This is deg: ', deg)            
+            deg.innerHTML = data.wind.deg;            
         }
         if (data.wind.gust != undefined) {
-            var gust = data.wind.gust;
-            console.log('This is gust: ', gust)               
+            var gust = data.wind.gust;               
         }
         
         clouds.innerHTML = data.clouds.all;
