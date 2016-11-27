@@ -14,6 +14,7 @@ var temp_max = getId("temp_max");
 var pressure = getId("pressure");
 var humidity = getId("humidity");
 var speed = getId("speed");
+var deg = getId("deg");
 var clouds = getId("clouds");
 var dt = getId("dt");
 var sunrise = getId("sunrise");
@@ -32,7 +33,7 @@ if (savedCity != null) {
     loadData(savedCity);
 }
 
-
+/* CURRENT WEATHER DATA (ONE LOCATION - BY CITY NAME) */
 // Call this method with the city name to load weather for that city
 function loadData(city) {
     // Register and get an api key
@@ -66,11 +67,21 @@ function loadData(city) {
         humidity.innerHTML = data.main.humidity + "%";
         
         // Wind - These properties are some times missing. Check for undefined before displaying them!
-        var speed = data.wind.speed;
-        var deg = data.wind.deg;
-        var gust = data.wind.gust;
-        
-        speed.innerHTML = speed;
+        // var speed = data.wind.speed;
+        // var deg = data.wind.deg;
+
+        if (data.wind.speed != undefined) {
+            speed.innerHTML = data.wind.speed; 
+            console.log('This is speed: ', speed)           
+        }
+        if (data.wind.deg != undefined) {
+            deg.innerHTML = data.wind.deg;
+            console.log('This is deg: ', deg)            
+        }
+        if (data.wind.gust != undefined) {
+            var gust = data.wind.gust;
+            console.log('This is gust: ', gust)               
+        }
         
         clouds.innerHTML = data.clouds.all;
         dt.innerHTML = new Date(data.dt * 1000).toDateString();
