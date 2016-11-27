@@ -52,7 +52,7 @@ function loadData(city) {
         weatherMain.innerHTML = data.weather[0].main;
         desc.innerHTML = data.weather[0].description;
         // * Use the icon name to load an image for the weather. 
-        icon.innerHTML = "<img src='http://openweathermap.org/img/w/"+data.weather[0].icon+".png'>";
+        icon.innerHTML = "<img src='icons/"+data.weather[0].icon+".png'>";
         // For more info on icons and condition codes: https://openweathermap.org/weather-conditions
         
         // * Convert the temp from Kelvin to F or C.
