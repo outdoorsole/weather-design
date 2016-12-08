@@ -44,12 +44,8 @@ function loadData(city) {
     $.get(path, function (data) {
         // Print the data to console. Go look at it right now!
         console.log(data);
-
-        // Collect values from the json data and display it in each of the divs above. 
-        coords.innerHTML = data.coord.lat + " " + data.coord.lon;
         
         // data.weather array sometimes has more than one item! 
-        weatherMain.innerHTML = data.weather[0].main;
         desc.innerHTML = data.weather[0].description;
         // * Use the icon name to load an image for the weather. 
         icon.innerHTML = "<img src='icons/"+data.weather[0].icon+".png'>";
