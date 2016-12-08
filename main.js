@@ -14,7 +14,6 @@ var temp_max = getId("temp_max");
 var pressure = getId("pressure");
 var humidity = getId("humidity");
 var speed = getId("speed");
-var deg = getId("deg");
 var clouds = getId("clouds");
 var dt = getId("dt");
 var sunrise = getId("sunrise");
@@ -69,9 +68,6 @@ function loadData(city) {
         // Wind - These properties are some times missing. Check for undefined before displaying.
         if (data.wind.speed != undefined) {
             speed.innerHTML = data.wind.speed;            
-        }
-        if (data.wind.deg != undefined) {
-            deg.innerHTML = data.wind.deg;            
         }
         if (data.wind.gust != undefined) {
             var gust = data.wind.gust;               
