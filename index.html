@@ -7,27 +7,28 @@
     <!-- Elements with ids to display weather data. -->
     <div id="app">
         <div class="name-location-info">
-        <div><h2>Single Day Forecast</h2></div>
-        <h1 id="location-name"><h1>
-        <div id="dt"></div>
-    </div>
+            <h2>Single Day Forecast</h2>
+            <h1 id="location-name"><h1>
+            <h3 id="dt"></h3>
+        </div>
 
-    <div>
-        <div><div id="desc"></div></div>
-        <div id="icon"></div>
-        <div>Temp:<div id="temp"></div></div>
-        <div>Sunrise:<div id="sunrise"></div></div>
-        <div>Sunset:<div id="sunset"></div></div>
-    </div>
+        <div>
+            <div><div id="desc"></div></div>
+            <div id="icon"></div>
+            <div id="temp"></div>
+            <div>Sunrise:<span id="sunrise"></span></div>
+            <div>Sunset:<span id="sunset"></span></div>
+        </div>
 
-    <div>
-        <div><h2>Additional Details</h2></div>
-        <div>Min:<div id="temp_min"></div></div>
-        <div>Max:<div id="temp_max"></div></div>
-        <div>Pressure:<div id="pressure"></div></div>
-        <div>Humidity:<div id="humidity"></div></div>
-        <div>Wind Speed:<div id="speed"></div></div>
-        <div>Clouds:<div id="clouds"></div></div>
+        <div>
+            <div><h2>Additional Details</h2></div>
+            <div>Min:<span id="temp_min"></span></div>
+            <div>Max:<span id="temp_max"></span></div>
+            <div>Pressure:<span id="pressure"></span></div>
+            <div>Humidity:<span id="humidity"></span></div>
+            <div>Wind Speed:<span id="speed"></span></div>
+            <div>Cloudiness:<span id="clouds"></span></div>
+        </div>
     </div>
 
     <!-- Form: Allows for input of the city name, and to submit the form weather for the particular city. -->
