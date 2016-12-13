@@ -6,3 +6,7 @@
 body {
   font-family: 'Merriweather', serif;
 }
+
+#location-name {
+  font-size: 48px;
+}
