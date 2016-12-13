@@ -52,11 +52,11 @@ function loadData(city) {
         // For more info on icons and condition codes: https://openweathermap.org/weather-conditions
         
         // * Convert the temp from Kelvin to F or C.
-        temp.innerHTML = "F:" + kToF(data.main.temp) + " C:" + kToC(data.main.temp);
+        temp.innerHTML = "F:" + kToF(data.main.temp) + "&deg;F";
         
         // * Convert these from K to T or C.
-        temp_min.innerHTML = kToF(data.main.temp_min);
-        temp_max.innerHTML = kToF(data.main.temp_max);
+        temp_min.innerHTML = kToF(data.main.temp_min) + "&deg;F";
+        temp_max.innerHTML = kToF(data.main.temp_max) + "&deg;F";
         
         pressure.innerHTML = data.main.pressure;
         humidity.innerHTML = data.main.humidity + "%";
